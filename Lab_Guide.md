@@ -32,12 +32,14 @@ Using [AWS CloudFormation](https://aws.amazon.com/cloudformation/), we are going
   * GuardDuty: Enable GuardDuty Yes/No. If you already have GuardDuty enabled select No. Note that GuardDuty will create and leave an IAM role the first time its enabled.
   * S3BucketPolicyExplicitDeny: (Optional) Explicitly deny destructive actions to the bucket. AWS root user will be required to modify this bucket if configured.
   * S3AccessLogsBucketName: (Optional) The name of an existing S3 bucket for storing S3 access logs.
+  
   **CloudTrail**
   * CloudTrailBucketName: The name of the new S3 bucket to create for CloudTrail to send logs to.  **IMPORTANT** Specify a bucket name that is unique.
   * CloudTrailCWLogsRetentionTime: Number of days to retain logs in CloudWatch Logs.
   * CloudTrailS3RetentionTime: Number of days to retain logs in the S3 bucket before they are automatically deleted.
   * CloudTrailEncryptS3Logs: (Optional) Use AWS KMS to encrypt logs stored in Amazon S3. A new KMS key will be created.
   * CloudTrailLogS3DataEvents: (Optional) These events provide insight into the resource operations performed on or within S3.
+  
   **Config**
   * ConfigBucketName: The name of the new S3 bucket to create for Config to save config snapshots to.  **IMPORTANT** Specify a bucket name that is unique.
   * ConfigSnapshotFrequency: AWS Config configuration snapshot frequency
@@ -45,15 +47,15 @@ Using [AWS CloudFormation](https://aws.amazon.com/cloudformation/), we are going
   **Guard Duty**
   * GuardDutyEmailAddress: The email address you own that will receive the alerts, you must have access to this address for testing.
 
-5. Once you have finished entering the details for the template continue to the bottom of the page and click **Next**.
-6. In this lab, we won't add any tags or other options. Click Next. Tags, which are key-value pairs, can help you identify your stacks. For more information, see [Adding Tags to Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html).
-7. Review the information for the stack. When you're satisfied with the configuration, check **I acknowledge that AWS CloudFormation might create IAM resources with custom names** then click **Create stack**.
+  * Once you have finished entering the details for the template continue to the bottom of the page and click **Next**.
+  * In this lab, we won't add any tags or other options. Click Next. Tags, which are key-value pairs, can help you identify your stacks. For more information, see [Adding Tags to Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html).
+  * Review the information for the stack. When you're satisfied with the configuration, check **I acknowledge that AWS CloudFormation might create IAM resources with custom names** then click **Create stack**.
 
 ![cloudformation-createstack-final](Images/cloudformation-createstack-final.png)
 
-8. After a few minutes the stack status should change from *CREATE_IN_PROGRESS* to *CREATE_COMPLETE*.
+  * After a few minutes the stack status should change from *CREATE_IN_PROGRESS* to *CREATE_COMPLETE*.
 You have now set up detective controls to log to your buckets and retain events, giving you the ability to search history and later enable pro-active monitoring of your AWS account!
-9. You should receive an email to confirm the SNS email subscription, you must confirm this. Note as the email is directly from GuardDuty via SNS is will be JSON format.
+  * You should receive an email to confirm the SNS email subscription, you must confirm this. Note as the email is directly from GuardDuty via SNS is will be JSON format.
 
 ## 2. Knowledge Check <a name="knowledge_check"></a>
 
