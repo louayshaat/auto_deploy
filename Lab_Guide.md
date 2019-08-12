@@ -16,15 +16,9 @@ Using [AWS CloudFormation](https://aws.amazon.com/cloudformation/), we are going
 
 [AWS Config](https://aws.amazon.com/config/) is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. AWS Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations.
 
-1. Download the latest version of the [cloudtrail-config-guardduty.yaml](https://raw.githubusercontent.com/awslabs/aws-well-architected-labs/master/Security/200_Automated_Deployment_of_Detective_Controls/Code/cloudtrail-config-guardduty.yaml) CloudFormation template from GitHub raw, or by [cloning](https://help.github.com/en/articles/cloning-a-repository) this repository.
-2. Sign in to the AWS Management Console, select your preferred region, and open the CloudFormation console at https://console.aws.amazon.com/cloudformation/. Note if your CloudFormation console does not look the same, you can enable the redesigned console by clicking **New Console** in the **CloudFormation** menu.
-3. Click **Create stack**.
+1. Launch the CloudFormation Stack [Build](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=GuardDuty-Hands-On&templateURL=https://raw.githubusercontent.com/awslabs/aws-well-architected-labs/master/Security/200_Automated_Deployment_of_Detective_Controls/Code/cloudtrail-config-guardduty.yaml) to setup the  environment
 
-![cloudformation-createstack-1](Images/cloudformation-createstack-1.png)
-
-![upload_a_template](Images/cloudformation_upload_a_template.png)
-
-4. Enter the following details for each section:
+2. Enter the following details for each section:
   **General**
   * Stack name: The name of this stack. For this lab, use `DetectiveControls`.
   * CloudTrail: Enable CloudTrail Yes/No. If you already have CloudTrail enabled select No.
