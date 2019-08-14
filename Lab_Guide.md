@@ -21,11 +21,11 @@ Using [AWS CloudFormation](https://aws.amazon.com/cloudformation/), we are going
 2. Enter the following details for each section:
   **General**
   * Stack name: The name of this stack. For this lab, use `DetectiveControls`.
-  * CloudTrail: Enable CloudTrail Yes/No. If you already have CloudTrail enabled select No.
-  * Config: Enable Config Yes/No. If you already have Config enabled select No.
-  * GuardDuty: Enable GuardDuty Yes/No. If you already have GuardDuty enabled select No. Note that GuardDuty will create and leave an IAM role the first time its enabled.
-  * S3BucketPolicyExplicitDeny: (Optional) Explicitly deny destructive actions to the bucket. AWS root user will be required to modify this bucket if configured.
-  * S3AccessLogsBucketName: (Optional) The name of an existing S3 bucket for storing S3 access logs.
+  * AWS CloudTrail: Enable CloudTrail Yes/No. If you already have CloudTrail enabled select No.
+  * AWS Config: Enable Config Yes/No. If you already have Config enabled select No.
+  * Amazon GuardDuty: Enable GuardDuty Yes/No. If you already have GuardDuty enabled select No. Note that GuardDuty will create and leave an AWS IAM role the first time its enabled.
+  * Amazon S3BucketPolicyExplicitDeny: (Optional) Explicitly deny destructive actions to the bucket. AWS root user will be required to modify this bucket if configured.
+  * Amazon S3AccessLogsBucketName: (Optional) The name of an existing S3 bucket for storing S3 access logs.
   
   **AWS CloudTrail**
   * CloudTrailBucketName: The name of the new S3 bucket to create for CloudTrail to send logs to.  **IMPORTANT** Specify a bucket name that is unique.
@@ -39,7 +39,7 @@ Using [AWS CloudFormation](https://aws.amazon.com/cloudformation/), we are going
   * ConfigSnapshotFrequency: AWS Config configuration snapshot frequency
   * ConfigS3RetentionTime: Number of days to retain logs in the S3 bucket before they are automatically deleted.
   
-  **Amazon Guard Duty**
+  **Amazon GuardDuty**
   * GuardDutyEmailAddress: The email address you own that will receive the alerts, you must have access to this address for testing.
 
   * Once you have finished entering the details for the template continue to the bottom of the page and click **Next**.
