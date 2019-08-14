@@ -27,18 +27,19 @@ Using [AWS CloudFormation](https://aws.amazon.com/cloudformation/), we are going
   * S3BucketPolicyExplicitDeny: (Optional) Explicitly deny destructive actions to the bucket. AWS root user will be required to modify this bucket if configured.
   * S3AccessLogsBucketName: (Optional) The name of an existing S3 bucket for storing S3 access logs.
   
-  **CloudTrail**
+  **AWS CloudTrail**
   * CloudTrailBucketName: The name of the new S3 bucket to create for CloudTrail to send logs to.  **IMPORTANT** Specify a bucket name that is unique.
   * CloudTrailCWLogsRetentionTime: Number of days to retain logs in CloudWatch Logs.
   * CloudTrailS3RetentionTime: Number of days to retain logs in the S3 bucket before they are automatically deleted.
   * CloudTrailEncryptS3Logs: (Optional) Use AWS KMS to encrypt logs stored in Amazon S3. A new KMS key will be created.
   * CloudTrailLogS3DataEvents: (Optional) These events provide insight into the resource operations performed on or within S3.
   
-  **Config**
+  **AWS Config**
   * ConfigBucketName: The name of the new S3 bucket to create for Config to save config snapshots to.  **IMPORTANT** Specify a bucket name that is unique.
   * ConfigSnapshotFrequency: AWS Config configuration snapshot frequency
   * ConfigS3RetentionTime: Number of days to retain logs in the S3 bucket before they are automatically deleted.
-  **Guard Duty**
+  
+  **Amazon Guard Duty**
   * GuardDutyEmailAddress: The email address you own that will receive the alerts, you must have access to this address for testing.
 
   * Once you have finished entering the details for the template continue to the bottom of the page and click **Next**.
